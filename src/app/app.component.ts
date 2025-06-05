@@ -4,7 +4,7 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,FooterComponent],
+  imports: [RouterOutlet, FooterComponent],
   templateUrl: './app.component.html',
 })
 export class AppComponent {
