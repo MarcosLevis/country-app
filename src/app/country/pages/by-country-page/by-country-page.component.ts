@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { CountrySearchInputComponent } from '../../components/country-search-input/country-search-input.component';
+import { Country } from '../../interfaces/country.interface';
 import { CountryListComponent } from '../../components/country-list/country-list.component';
 
 @Component({
@@ -10,6 +11,8 @@ import { CountryListComponent } from '../../components/country-list/country-list
 export class ByCountryPageComponent {
 
    searchValue: string = ('')
+   
+   countries = signal<Country[]>([])
    
    onSearch(value: string){
       this.searchValue = value;
