@@ -1,16 +1,12 @@
-import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
-import { RESTCountry } from '../../interfaces/rest-countries.interface';
+import {  DecimalPipe } from '@angular/common';
+import { Component, input } from '@angular/core';
 import { Country } from '../../interfaces/country.interface';
 
 @Component({
   selector: 'country-list',
   standalone: true,
-  imports: [
-    CommonModule,
-  ],
+  imports: [DecimalPipe],
   templateUrl: './country-list.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CountryListComponent {
   countries = input.required<Country[]>()
