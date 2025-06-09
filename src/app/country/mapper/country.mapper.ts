@@ -10,6 +10,8 @@ export class CountryMapper {
       name: rest.name.common,
       capital: rest.capital.join(','),
       population: rest.population,
+      region: rest.region,
+      subRegion: rest.subregion,
     };
   }
 
