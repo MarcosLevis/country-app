@@ -1,15 +1,14 @@
-import { Component, input, output } from '@angular/core';
+import { Component, input, output, signal } from '@angular/core';
 
 @Component({
   selector: 'country-search-input',
   standalone: true,
-  imports: [
-  ],
+  imports: [],
   templateUrl: './country-search-input.component.html',
 })
-export class CountrySearchInputComponent { 
+export class CountrySearchInputComponent {
+  placeholderInput = input('Buscar');
+  searchValueEvent = output<string>();
 
-  placeholderInput = input('Buscar')
-  searchValueEvent = output<string>()
-
+  inputValue = signal<string>('')
 }
