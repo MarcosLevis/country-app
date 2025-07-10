@@ -5,10 +5,12 @@
     [placeholder]="placeholderInput()"
     autofocus
     #txtSearch
-    (keyup.enter)="inputValue.set(txtSearch.value)"
+    (keyup.enter)="value.emit(txtSearch.value)"
+    (keyup)="inputValue.set(txtSearch.value)"
+
   />
   <button
-    (click)="searchValueEvent.emit(txtSearch.value)"
+    (click)="value.emit(txtSearch.value)"
     class="btn btn-secundary"
   >
     Buscar
